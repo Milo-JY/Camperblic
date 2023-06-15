@@ -13,9 +13,7 @@ const FreeBoard = () => {
     }, []);
 
     return (
-        <ul>
-            <BoardLayOut postings={postings}/>
-        </ul>
+        <BoardLayOut postings={postings}/>
     );
 };
 

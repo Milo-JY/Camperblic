@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Posting} from "../../types";
 import axios from "axios";
+import "../../styles/communityStyles/boardDetail.css";
 import BoardLayOut from "./BoardLayOut";
 
 const GatherCamperBoard = () => {
@@ -13,9 +14,7 @@ const GatherCamperBoard = () => {
     }, []);
 
     return (
-        <ul>
-            <BoardLayOut postings={postings}/>
-        </ul>
+        <BoardLayOut postings={postings}/>
     );
 };
 

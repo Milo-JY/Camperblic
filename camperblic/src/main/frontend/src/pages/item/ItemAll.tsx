@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Item} from "../../types";
 import axios from "axios";
 import ItemLayOut from "./ItemLayOut";
-
+import TopLayOut from "./TopLayOut";
 
 const ItemAll = () => {
     const [items, setItems] = useState<Item[]>([]);
@@ -14,9 +14,12 @@ const ItemAll = () => {
     }, []);
 
     return (
-
-            <ItemLayOut items={items} topText="전체상품"/>
-
+        <>
+            <TopLayOut>전체상품</TopLayOut>
+        <ul>
+            <ItemLayOut items={items}/>
+        </ul>
+            </>
     );
 };
 

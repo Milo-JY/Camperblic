@@ -44,4 +44,10 @@ public class JpaPostingRepository implements PostingRepository{
         return em.createQuery("select p from Reviewcampingsite p", Reviewcampingsite.class)
                 .getResultList();
     }// findAll 메서드 끝
+
+
+    @Override
+    public Campstoryboard findCampPostingById(Long id) {
+        return em.find(Campstoryboard.class, id);
+    }
 }

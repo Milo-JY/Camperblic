@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import ItemLayOut from "./ItemLayOut";
 import axios from "axios";
 import {Item} from "../../types";
-
+import TopLayOut from "./TopLayOut";
 
 const Cook = () => {
     const [items, setItems] = useState<Item[]>([]);
@@ -14,9 +14,12 @@ const Cook = () => {
     }, []);
 
     return (
-
-            <ItemLayOut items={items} topText="취사도구"/>
-
+        <>
+            <TopLayOut>취사용품</TopLayOut>
+        <ul>
+            <ItemLayOut items={items}/>
+        </ul>
+        </>
     );
 };
 
