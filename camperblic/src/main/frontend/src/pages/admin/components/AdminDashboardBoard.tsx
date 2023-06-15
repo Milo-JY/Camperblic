@@ -3,9 +3,23 @@ import '../../../styles/adminStyles/AdminDashboardBoard.css';
 
 const AdminDashboardBoard = () => {
     return (
-        <div className='admindashboard_board'>
-            <div>dfg</div>
-        </div>
+        <section className='admindashboard_board'>
+            <div className='admindashboard_boardtitle'><a href='./adminboard'>게시판현황</a></div>
+            <div className='admindashboard_boardcenter'>
+                <table className='admindashboard_boardtable'>
+                    <tr className='admindashboard_boardtableth'>
+                        <th className='admindashboard_boardth'>글번호</th>
+                        <th className='admindashboard_boardth'>게시판제목</th>
+                        <th className='admindashboard_boardth'>작성자ID</th>
+                    </tr>
+                    <tr className='admindashboard_boardtabletd'>
+                        <td className='admindashboard_boardth'>233333</td>
+                        <td className='admindashboard_boardth'>안녕하세요</td>
+                        <td className='admindashboard_boardth'>dfjgl123</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
     );
 };
 
