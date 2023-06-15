@@ -1,3 +1,10 @@
+.App{
+    background-color: #282c34;
+    color: black;
+}
+
 main {
-    margin: 25px 25px 25px 250px;
+    margin-left: 250px;
+    padding: 30px;
+    padding-top: 55px;
 }

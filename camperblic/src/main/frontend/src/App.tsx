@@ -31,7 +31,6 @@ import CommunityDashboard from "./pages/community/CommunityDashboard";
 import FreeBoard from "./pages/community/FreeBoard";
 import GatherCamperBoard from "./pages/community/GatherCamperBoard";
 import ReviewCampSite from "./pages/community/ReviewCampSite";
-import BoardDetail from "./pages/community/BoardDetail";
 
 function App() {
 
@@ -40,8 +39,8 @@ function App() {
         <div>
             <BrowserRouter>
                 <Header/>
-                <main>
 
+                <section>
                     <Routes>
                         <Route path='/' element={<Main/>}/>
                         <Route path='/members' element={<MemberList/>}/>
@@ -60,7 +59,6 @@ function App() {
                         <Route path='/freeboard' element={<FreeBoard/>}/>
                         <Route path='/gathercamper' element={<GatherCamperBoard/>}/>
                         <Route path='/reviewcampingsite' element={<ReviewCampSite/>}/>
-                        <Route path='/boarddetail/:id' element={<BoardDetail/>}/>
 
                         {/* 신준 상품 관련 페이지 */}
                         <Route path='/itemall' element={<ItemAll/>}/>
@@ -83,8 +81,8 @@ function App() {
                         <Route path='/adminstock' element={<AdminStock/>}/>
                     </Routes>
 
-                </main>
-                <Footer/>
+                    <Footer/>
+                </section>
             </BrowserRouter>
         </div>
     );

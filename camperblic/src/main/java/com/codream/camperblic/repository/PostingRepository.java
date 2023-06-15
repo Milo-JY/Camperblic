@@ -13,5 +13,4 @@ public interface PostingRepository {
     List<Freeboard> findFreePostings();
     List<Gathercamper> findGatherPostings();
     List<Reviewcampingsite> findReviewPostings();
-    Campstoryboard findCampPostingById(Long id);
 }

@@ -1,14 +1,5 @@
-import "../styles/footer.css";
 export default function Footer() {
     return (
-        <footer>
-            <section>
-
-            </section>
-
-            <section>
-
-            </section>
-        </footer>
+        <footer style={{backgroundColor: "red", height:"500px"}}>푸터임</footer>
     )
 }

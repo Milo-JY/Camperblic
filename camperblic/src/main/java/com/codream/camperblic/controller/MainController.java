@@ -9,8 +9,6 @@ import com.codream.camperblic.service.ItemService;
 import com.codream.camperblic.service.PostingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -28,7 +26,6 @@ public class MainController {
         this.postingService = postingService;
     }
 
-    // 신준이 컨트롤러
     @GetMapping("/cook")
     public List<Cook> cooks() {
         return itemService.findCooks();
@@ -52,10 +49,8 @@ public class MainController {
     @GetMapping("/tent")
     public List<Tent> tent() {
         return itemService.findTent();
-    } // 신준이 컨트롤러 끝
+    }
 
-
-    // 민수 컨트롤러
     @GetMapping("/campstory")
     public List<Campstoryboard> campstory() {
         return postingService.findCampPostings();
@@ -74,9 +69,5 @@ public class MainController {
     @GetMapping("/reviewcampingsite")
     public List<Reviewcampingsite> reviewcampingsite() {
         return postingService.findReviewPostings();
-    }
-    @GetMapping("/boarddetail/{id}")
-    public Campstoryboard boarddetail(@PathVariable("id") Long id) {
-        return postingService.findCampPostingDetail(id);
     }
 }

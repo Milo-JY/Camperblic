@@ -13,7 +13,9 @@ const ReviewCampSite = () => {
     }, []);
 
     return (
-        <BoardLayOut postings={postings}/>
+        <ul>
+            <BoardLayOut postings={postings}/>
+        </ul>
     );
 };
 

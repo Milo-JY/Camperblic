@@ -33,8 +33,4 @@ public class PostingService {
     public List<Reviewcampingsite> findReviewPostings() {
         return postingRepository.findReviewPostings();
     }
-
-    public Campstoryboard findCampPostingDetail(Long id) {
-        return postingRepository.findCampPostingById(id);
-    }
 }

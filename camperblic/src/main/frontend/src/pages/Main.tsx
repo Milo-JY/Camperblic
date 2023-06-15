@@ -1,7 +1,8 @@
+import "../styles/main.css";
 export default function Main() {
     return (
-        <section>
+        <main>
             메인입니다 뿌슝
-        </section>
+        </main>
     )
 }

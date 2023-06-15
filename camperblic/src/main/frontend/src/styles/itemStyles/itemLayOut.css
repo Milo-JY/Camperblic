@@ -1,17 +1,18 @@
-.itemLayOut{
-    padding-right: 55px;
-    padding-top: 30px;
-}
+/*.itemLayOut{*/
+/*    padding-right: 55px;*/
+/*    padding-top: 30px;*/
+/*}*/
 
 .item-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,250px));
     gap: 20px;
+    justify-content: center;
 }
 
 .item-card {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: antiquewhite;
     border-radius: 5px;
 }
 
@@ -42,4 +43,17 @@
 .item-stock {
     color: gray;
     font-size: 14px;
+}
+
+
+.topFont{
+    background-color: #61dafb;
+    margin-left: 250px;
+    margin-right: 25px;
+}
+.topText {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
