@@ -2,9 +2,9 @@ import React from 'react';
 
 const FindPassword = () => {
     return (
-        <div>
+        <section>
             
-        </div>
+        </section>
     );
 };
 

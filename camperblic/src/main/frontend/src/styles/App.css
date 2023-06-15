@@ -1,3 +1,8 @@
+.App{
+    background-color: #282c34;
+    color: black;
+}
+
 main {
     margin: 25px 25px 25px 250px;
 }

@@ -40,8 +40,8 @@ function App() {
         <div>
             <BrowserRouter>
                 <Header/>
-                <main>
 
+                <main>
                     <Routes>
                         <Route path='/' element={<Main/>}/>
                         <Route path='/members' element={<MemberList/>}/>
@@ -82,8 +82,8 @@ function App() {
                         <Route path='/adminmember' element={<AdminMember/>}/>
                         <Route path='/adminstock' element={<AdminStock/>}/>
                     </Routes>
-
                 </main>
+
                 <Footer/>
             </BrowserRouter>
         </div>
