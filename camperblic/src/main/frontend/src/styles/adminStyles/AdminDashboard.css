@@ -1,0 +1,32 @@
+.admindashboard_first,
+.admindashboard_second,
+.admindashboard_graph,
+.admindashboard_bottom{
+    margin-left: 250px;
+    margin-top: 25px;
+    border-bottom: 1px solid;
+}
+
+.admindashboard_first{
+    line-height: 50px;
+    height:50px;
+}
+
+
+/* .admindashboard_graph{
+    margin-left: 250px;
+    font-size: 50px;
+    display: grid;
+    z-index: 50;
+    margin-top: 25px;
+    height: 300px;
+} */
+
+.admindashboard_bottom{
+    display: flex;
+    height:300px;
+    /* width:100%; */
+    overflow: hidden;
+    /* justify-content: left; */
+}
+

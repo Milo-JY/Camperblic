@@ -1,0 +1,11 @@
+.topFont{
+    background-color: #61dafb;
+    margin-left: 250px;
+    margin-right: 25px;
+}
+.topText {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
