@@ -1,10 +1,12 @@
 import React from 'react';
+import "../../styles/paymentStyles/Order.css";
 
 const Order = () => {
     return (
-        <div>
-            
-        </div>
+        <section className={'orderLayout'}>
+
+
+        </section>
     );
 };
 
