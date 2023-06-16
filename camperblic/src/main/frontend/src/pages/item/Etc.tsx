@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Item} from "../../types";
 import axios from "axios";
 import ItemLayOut from "./ItemLayOut";
-import TopLayOut from "./TopLayOut";
+
 
 const Etc = () => {
     const [items, setItems] = useState<Item[]>([]);
@@ -14,12 +14,9 @@ const Etc = () => {
     }, []);
 
     return (
-        <>
-            <TopLayOut>소품</TopLayOut>
-        <ul>
-            <ItemLayOut items={items}/>
-        </ul>
-            </>
+
+            <ItemLayOut items={items} topText="소품"/>
+
     );
 };
 
