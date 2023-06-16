@@ -10,5 +10,8 @@
         <module name="camperblic.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="camperblic" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
