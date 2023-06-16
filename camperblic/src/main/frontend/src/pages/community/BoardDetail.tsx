@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Posting } from '../../types';
-import "../../styles/communityStyles/boardDetail.css"
+import '../../styles/communityStyles/boardDetail.css';
 
 const BoardDetail: React.FC = () => {
-    const { id } = useParams<{ id: string }>();
+    const { id, category } = useParams<{ id: string, category: string }>();
     const [posting, setPosting] = useState<Posting>();
 
     useEffect(() => {
         axios
-            .get(`/boarddetail/${id}`)
+            .get(`/boarddetail/${category}/${id}`)
             .then((response) => setPosting(response.data))
             .catch((error) => {
                 console.error('게시물을 가져오는 데 실패했습니다.', error);
@@ -18,7 +18,7 @@ const BoardDetail: React.FC = () => {
     }, [id]);
 
     return (
-        <main>
+        <section>
             <div className="board-detail-container">
                 <section className="board-detail">
                     <div className="container">
@@ -41,9 +41,8 @@ const BoardDetail: React.FC = () => {
                     </div>
                 </section>
             </div>
-        </main>
+        </section>
     );
 };
-
 
 export default BoardDetail;

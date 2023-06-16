@@ -1,9 +1,9 @@
 package com.codream.camperblic.service;
 
-import com.codream.camperblic.domain.community.Campstoryboard;
+import com.codream.camperblic.domain.community.Campstory;
 import com.codream.camperblic.domain.community.Freeboard;
 import com.codream.camperblic.domain.community.Gathercamper;
-import com.codream.camperblic.domain.community.Reviewcampingsite;
+import com.codream.camperblic.domain.community.Reviewcamping;
 import com.codream.camperblic.repository.PostingRepository;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ public class PostingService {
         this.postingRepository = postingRepository;
     }
 
-    public List<Campstoryboard> findCampPostings() {
+    public List<Campstory> findCampPostings() {
         return postingRepository.findCampPostings();
     }
 
@@ -30,11 +30,23 @@ public class PostingService {
         return postingRepository.findGatherPostings();
     }
 
-    public List<Reviewcampingsite> findReviewPostings() {
+    public List<Reviewcamping> findReviewPostings() {
         return postingRepository.findReviewPostings();
     }
 
-    public Campstoryboard findCampPostingDetail(Long id) {
+    public Campstory findCampPostingDetail(Long id) {
         return postingRepository.findCampPostingById(id);
+    }
+
+    public Freeboard findFreePostingDetail(Long id) {
+        return postingRepository.findFreePostingById(id);
+    }
+
+    public Gathercamper findGatherPostingDetail(Long id) {
+        return postingRepository.findGatherPostingById(id);
+    }
+
+    public Reviewcamping findReviewPostingDetail(Long id) {
+        return postingRepository.findReviewPostingById(id);
     }
 }
