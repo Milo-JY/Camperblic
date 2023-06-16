@@ -1,7 +1,7 @@
 export default function Main() {
     return (
-        <main>
+        <section>
             메인입니다 뿌슝
-        </main>
+        </section>
     )
 }

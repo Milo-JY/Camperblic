@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Main from "./pages/Main";
-import MemberList from "./pages/MemberList";
 import Cook from "./pages/item/Cook";
 import Etc from "./pages/item/Etc";
 import Mat from "./pages/item/Mat";
@@ -44,7 +43,6 @@ function App() {
                 <main>
                     <Routes>
                         <Route path='/' element={<Main/>}/>
-                        <Route path='/members' element={<MemberList/>}/>
 
                         {/* 호준 로그인 관련 페이지 */}
                         <Route path='/login' element={<Login/>}/>
@@ -60,7 +58,7 @@ function App() {
                         <Route path='/freeboard' element={<FreeBoard/>}/>
                         <Route path='/gathercamper' element={<GatherCamperBoard/>}/>
                         <Route path='/reviewcampingsite' element={<ReviewCampSite/>}/>
-                        <Route path='/boarddetail/:id' element={<BoardDetail/>}/>
+                        <Route path='/boarddetail/:category/:id' element={<BoardDetail/>}/>
 
                         {/* 신준 상품 관련 페이지 */}
                         <Route path='/itemall' element={<ItemAll/>}/>
