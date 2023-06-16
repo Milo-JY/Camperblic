@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ItemCart = () => {
+const ItemlistCart = () => {
     return (
         <div className={'item_cart'}>
             <div className={'table_wrap'}>
@@ -12,4 +12,4 @@ const ItemCart = () => {
     );
 };
 
-export default ItemCart;
+export default ItemlistCart;

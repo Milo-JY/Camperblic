@@ -3,7 +3,8 @@ import {Simulate} from "react-dom/test-utils";
 import select = Simulate.select;
 import "../../styles/paymentStyles/Cart.css";
 import TitleLayout from "./TitleLayout";
-import ItemCart from "./ItemCart";
+import ItemlistCart from "./ItemlistCart";
+import ChargeBox from "./ChargeBox";
 
 const Cart = () => {
     return (
@@ -12,10 +13,12 @@ const Cart = () => {
                 <div className={'list_section'}>
                     <div className={'list_inner'}>
                         <TitleLayout/>
-                        <ItemCart/>
+                        <ItemlistCart/>
                     </div>
                 </div>
-                <div className={'fixed_section'}></div>
+
+                <ChargeBox/>
+
                 <div className={'progress_section'}></div>
             </div>
         </section>
