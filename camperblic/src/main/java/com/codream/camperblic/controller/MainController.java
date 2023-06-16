@@ -16,43 +16,12 @@ import java.util.List;
 
 @RestController
 public class MainController {
-
-    private ItemService itemService;
     private PostingService postingService;
 
     @Autowired
-    public MainController(ItemService itemService,
-                               PostingService postingService) {
-        this.itemService = itemService;
+    public MainController(PostingService postingService) {
         this.postingService = postingService;
     }
-
-    // 신준이 컨트롤러
-    @GetMapping("/cook")
-    public List<Cook> cooks() {
-        return itemService.findCooks();
-    }
-
-    @GetMapping("/etc")
-    public List<Etc> etc() {
-        return itemService.findEtc();
-    }
-
-    @GetMapping("/mat")
-    public List<Mat> mat() {
-        return itemService.findMat();
-    }
-
-    @GetMapping("/chair")
-    public List<Chair> chair() {
-        return itemService.findChair();
-    }
-
-    @GetMapping("/tent")
-    public List<Tent> tent() {
-        return itemService.findTent();
-    } // 신준이 컨트롤러 끝
-
 
     // 민수 컨트롤러
     @GetMapping("/campstory")
