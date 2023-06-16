@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../../styles/adminStyles/AdminDashboardSecond.css';
+import AdminDashboardSecondTime from "./AdminDashboardSecondTime";
+import {Link} from "react-router-dom";
 
-const AdminDashboardSecond = () => {
+interface AdminDashboardSecondProps {
+    isOrderStatusVisible: boolean;
+    onToggleOrderStatus: () => void;
+}
+
+const AdminDashboardSecond: React.FC<AdminDashboardSecondProps> = ({ isOrderStatusVisible, onToggleOrderStatus }) => {
+    const [buttonText, setButtonText] = useState("주문현황");
+
+    const handleOrderStatusClick = () => {
+        onToggleOrderStatus();
+        setButtonText(prevText => (prevText === "주문현황" ? "전체요약" : "주문현황"));
+    };
+
     return (
-        <div className='second_div'>
-            <a className='second_member' href='./ad' >멤버관리</a>
-            <a>주문현황</a>
-            <a>1대1문의내역</a>
-            <a>취소관리</a>
-            <a>환불관리</a>
-            <a>오늘날짜 및 로그인한 시각 띄우기</a>
-        </div>
+        <section className='second_div'>
+            <Link className='second_member' to='/adminmember'>회원관리</Link>
+            <div>
+                <div className='admindashboard_test'>
+                    <button className='adminsecond_btn' onClick={handleOrderStatusClick}>{buttonText}</button>
+                </div>
+            </div>
+            {isOrderStatusVisible && <AdminDashboardSecondTime />}
+        </section>
     );
 };
 
