@@ -1,10 +1,11 @@
 import React from 'react';
 import '../../../styles/adminStyles/AdminDashboardBoard.css';
+import {Link} from "react-router-dom";
 
 const AdminDashboardBoard = () => {
     return (
         <section className='admindashboard_board'>
-            <div className='admindashboard_boardtitle'><a href='./adminboard'>게시판현황</a></div>
+            <div className='admindashboard_boardtitle'><Link to='/adminboard'>게시판현황</Link></div>
             <div className='admindashboard_boardcenter'>
                 <table className='admindashboard_boardtable'>
                     <tr className='admindashboard_boardtableth'>

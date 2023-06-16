@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../../styles/adminStyles/AdminDashboardSecond.css';
 import AdminDashboardSecondTime from "./AdminDashboardSecondTime";
+import {Link} from "react-router-dom";
 
 interface AdminDashboardSecondProps {
     isOrderStatusVisible: boolean;
@@ -17,7 +18,7 @@ const AdminDashboardSecond: React.FC<AdminDashboardSecondProps> = ({ isOrderStat
 
     return (
         <section className='second_div'>
-            <a className='second_member' href='./adminmember'>회원관리</a>
+            <Link className='second_member' to='/adminmember'>회원관리</Link>
             <div>
                 <div className='admindashboard_test'>
                     <button className='adminsecond_btn' onClick={handleOrderStatusClick}>{buttonText}</button>
