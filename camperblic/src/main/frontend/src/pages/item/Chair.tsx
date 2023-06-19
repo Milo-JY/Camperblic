@@ -1,26 +1,31 @@
-import React, {useEffect, useState} from 'react';
-import {Item} from "../../types";
+import React, { useEffect, useState } from 'react';
+import { Item } from "../../types";
 import axios from "axios";
 import ItemLayOut from "./ItemLayOut";
-import TopLayOut from "./TopLayOut";
 
-const Chair = () => {
+const Etc = () => {
     const [items, setItems] = useState<Item[]>([]);
+    const [isLoading, setIsLoading] = useState(false);
+
+    const fetchItems = () => {
+        setIsLoading(true);
+        axios.get('/chair')
+            .then(response => setItems(prevItems => [...prevItems, ...response.data]))
+            .catch(error => console.log(error))
+            .finally(() => setIsLoading(false));
+    };
+
+    const loadMoreItems = () => {
+        fetchItems();
+    };
 
     useEffect(() => {
-        axios.get('/chair')
-            .then(response => setItems(response.data))
-            .catch(error => console.log(error))
+        fetchItems();
     }, []);
 
     return (
-        <>
-            <TopLayOut>테이블/체어</TopLayOut>
-        <ul>
-            <ItemLayOut items={items}/>
-        </ul>
-            </>
+        <ItemLayOut items={items} topText="기타" onLoadMore={loadMoreItems} />
     );
 };
 
-export default Chair;
+export default Etc;

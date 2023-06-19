@@ -1,0 +1,26 @@
+.adminboard_title{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid;
+    margin-bottom: 30px;
+}
+
+.adminboard_grid{
+    margin-left: 20px;
+}
+
+.adminboard_container{
+    display: grid;
+    /*margin-left: 250px;*/
+    /*padding: 25px 50px;*/
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.adminboard_board{
+    background-color: chartreuse;
+    padding: 20px;
+}
+

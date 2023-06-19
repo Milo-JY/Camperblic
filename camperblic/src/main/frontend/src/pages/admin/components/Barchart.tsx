@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { ResponsiveBar } from '@nivo/bar';
 
+
+
 const Barchart = () => {
     const handle = {
         barClick: (data: any) => {
@@ -14,7 +16,7 @@ const Barchart = () => {
 
     return (
         // chart height이 100%이기 때문이 chart를 덮는 마크업 요소에 height 설정
-        <div style={{ width: '800px', height: '500px', margin: '0 auto' }}>
+        <section style={{ width: '800px', height: '500px', margin: '0 auto' }}>
             <ResponsiveBar
                 /**
                  * chart에 사용될 데이터
@@ -157,7 +159,7 @@ const Barchart = () => {
                     },
                 ]}
             />
-        </div>
+        </section>
     );
 };
 
