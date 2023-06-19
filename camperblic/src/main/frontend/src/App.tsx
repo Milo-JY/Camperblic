@@ -58,9 +58,23 @@ function App() {
                         <Route path='/community' element={<CommunityDashboard/>}/>
                         <Route path='/freeboard' element={<FreeBoard/>}/>
                         <Route path='/gathercamper' element={<GatherCamperBoard/>}/>
+<<<<<<< HEAD
                         <Route path='/reviewcamping' element={<ReviewCamping/>}/>
                         <Route path='/boarddetail/:category/:id' element={<BoardDetail/>}/>
                         <Route path='/writepost/:category' element={<BoardWrite/>}/>
+=======
+                        <Route path='/reviewcampingsite' element={<ReviewCampSite/>}/>
+                        <Route path='/boarddetail/:category/:id' element={<BoardDetail/>}/>
+
+                        {/* 신준 상품 관련 페이지 */}
+                        {/*<Route path='/itemall' element={<ItemAll/>}/>*/}
+                        {/*<Route path='/itemdetail' element={<ItemDetail/>}/>*/}
+                        {/*<Route path='/cook' element={<Cook/>}/>*/}
+                        {/*<Route path='/etc' element={<Etc/>}/>*/}
+                        {/*<Route path='/mat' element={<Mat/>}/>*/}
+                        {/*<Route path='/chair' element={<Chair/>}/>*/}
+                        {/*<Route path='/tent' element={<Tent/>}/>*/}
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
 
                         {/* 신준 상품 관련 페이지 */}
                         <Route path='/itemall' element={<ItemAll/>}/>

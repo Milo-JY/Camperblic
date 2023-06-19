@@ -5,7 +5,11 @@ header * {
 
 header {
     position: fixed;
+<<<<<<< HEAD
     top: 0;
+=======
+    top: 0px;
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
     width: 250px;
     height: 100vh;
     background-color: black;
@@ -29,6 +33,7 @@ header a:hover {
     width: 100%;
     height: 100%;
     background-color: black;
+<<<<<<< HEAD
 }
 
 .mallCommuContainer {
@@ -66,6 +71,8 @@ header a:hover {
     position: relative;
     right: 0;
     transition: right 0.3s ease; /* Add transition property */
+=======
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
 }
 
 .mall,
@@ -75,9 +82,24 @@ header a:hover {
     width: 249px;
 }
 
+<<<<<<< HEAD
 .headerLogo {
     display: flex;
     align-items: center;
+=======
+/*.mall::-webkit-scrollbar {*/
+/*    width: 8px;*/
+/*}*/
+
+/*.mall::-webkit-scrollbar-track {*/
+/*    background: black;*/
+/*}*/
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
     padding: 35px 20px;
     border-bottom: 1px solid rgb(66, 66, 66);
     font-size: 30px;
@@ -148,11 +170,16 @@ header nav {
     transition: color 0.3s ease;
 }
 
+<<<<<<< HEAD
 .bottomBtn:hover {
     color: #fff;
 }
 
 header nav a {
+=======
+header nav a {
+    color: white;
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
     display: flex;
     height: 50px;
     padding-left: 20px;

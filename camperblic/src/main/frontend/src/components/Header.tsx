@@ -23,6 +23,7 @@ const Header = () => {
                 <h1 className="headerLogo">
                     <Link to="/">CAMPERBLIC.</Link>
                 </h1>
+<<<<<<< HEAD
                 <button className="headerBtn">
                     <Link to="/login">로그인</Link>
                 </button>
@@ -33,6 +34,10 @@ const Header = () => {
                         <button className="headerMallCommuBtn">쇼핑</button>
                     </div>
                 </div>
+=======
+                <button className="headerBtn"><Link to="/login">로그인</Link></button>
+                <button className="headerBtn" onClick={handleOfIsMall}>쇼핑몰</button>
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
 
                 <nav className="totalMenu">
                     <Link to="/cart">장바구니</Link>

@@ -1,23 +1,42 @@
-import React, {useEffect, useState} from 'react';
-import ItemLayOut from "./ItemLayOut";
+import React, { useEffect, useState } from 'react';
+import { Item } from "../../types";
 import axios from "axios";
+<<<<<<< HEAD
 import {Item} from "../../types";
 
+=======
+import ItemLayOut from "./ItemLayOut";
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
 
-const Cook = () => {
+const Etc = () => {
     const [items, setItems] = useState<Item[]>([]);
+    const [isLoading, setIsLoading] = useState(false);
+
+    const fetchItems = () => {
+        setIsLoading(true);
+        axios.get('/cook')
+            .then(response => setItems(prevItems => [...prevItems, ...response.data]))
+            .catch(error => console.log(error))
+            .finally(() => setIsLoading(false));
+    };
+
+    const loadMoreItems = () => {
+        fetchItems();
+    };
 
     useEffect(() => {
-        axios.get('/cook')
-            .then(response => setItems(response.data))
-            .catch(error => console.log(error))
+        fetchItems();
     }, []);
 
     return (
+<<<<<<< HEAD
 
             <ItemLayOut items={items} topText="취사도구"/>
 
+=======
+        <ItemLayOut items={items} topText="기타" onLoadMore={loadMoreItems} />
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
     );
 };
 
-export default Cook;
+export default Etc;

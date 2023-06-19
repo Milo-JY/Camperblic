@@ -4,25 +4,45 @@ import com.codream.camperblic.domain.community.Campstory;
 import com.codream.camperblic.domain.community.Freeboard;
 import com.codream.camperblic.domain.community.Gathercamper;
 import com.codream.camperblic.domain.community.Reviewcamping;
+<<<<<<< HEAD
 import com.codream.camperblic.service.PostingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+=======
+import com.codream.camperblic.domain.item.*;
+import com.codream.camperblic.service.ItemService;
+import com.codream.camperblic.service.PostingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
 
 import java.util.List;
 
 @RestController
 public class MainController {
+<<<<<<< HEAD
     private final PostingService postingService;
+=======
+    private PostingService postingService;
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
 
     @Autowired
     public MainController(PostingService postingService) {
         this.postingService = postingService;
     }
 
+<<<<<<< HEAD
     // 게시글 리스트 조회
     @GetMapping("/campstory")
     public List<Campstory> getCampstoryPostings() {
+=======
+    // 민수 컨트롤러
+    @GetMapping("/campstory")
+    public List<Campstory> campstory() {
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
         return postingService.findCampPostings();
     }
 
@@ -36,6 +56,7 @@ public class MainController {
         return postingService.findGatherPostings();
     }
 
+<<<<<<< HEAD
     @GetMapping("/reviewcamping")
     public List<Reviewcamping> getReviewcampingPostings() {
         return postingService.findReviewPostings();
@@ -125,3 +146,27 @@ public class MainController {
     }
 
 }
+=======
+    @GetMapping("/reviewcampingsite")
+    public List<Reviewcamping> reviewcampingsite() {
+        return postingService.findReviewPostings();
+    }
+
+    @GetMapping("/boarddetail/{category}/{id}")
+    public Object getPostingDetail(@PathVariable("category") String category, @PathVariable("id") Long id) {
+        Object postingDetail = null;
+
+        if (category.equals("campstory")) {
+            postingDetail = postingService.findCampPostingDetail(id);
+        } else if (category.equals("freeboard")) {
+            postingDetail = postingService.findFreePostingDetail(id);
+        } else if (category.equals("gathercamper")) {
+            postingDetail = postingService.findGatherPostingDetail(id);
+        } else if (category.equals("reviewcamping")) {
+            postingDetail = postingService.findReviewPostingDetail(id);
+        }
+
+        return postingDetail;
+    }// 민수 컨트롤러 끝
+}
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c

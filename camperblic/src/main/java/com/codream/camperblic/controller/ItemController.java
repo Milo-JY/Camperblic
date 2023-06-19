@@ -20,6 +20,12 @@ public class ItemController {
     }
 
     // 신준이 컨트롤러
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
     @GetMapping("/cook")
     public List<Cook> cooks() {
         return itemService.findCooks();

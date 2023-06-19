@@ -18,7 +18,10 @@ public class PostingService {
         this.postingRepository = postingRepository;
     }
 
+<<<<<<< HEAD
     // find list
+=======
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
     public List<Campstory> findCampPostings() {
         return postingRepository.findCampPostings();
     }
@@ -35,7 +38,10 @@ public class PostingService {
         return postingRepository.findReviewPostings();
     }
 
+<<<<<<< HEAD
     // find detail
+=======
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
     public Campstory findCampPostingDetail(Long id) {
         return postingRepository.findCampPostingById(id);
     }
@@ -51,6 +57,7 @@ public class PostingService {
     public Reviewcamping findReviewPostingDetail(Long id) {
         return postingRepository.findReviewPostingById(id);
     }
+<<<<<<< HEAD
 
     // 글 등록
     public Campstory uploadCampPosting(Campstory campstory) {
@@ -98,4 +105,6 @@ public class PostingService {
         postingRepository.increaseViewCount(category, id);
         return true;
     }
+=======
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
 }

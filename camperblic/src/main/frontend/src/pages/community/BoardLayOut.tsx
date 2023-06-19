@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
 import { Link, useNavigate } from 'react-router-dom';
 import { Posting } from '../../types';
 import '../../styles/communityStyles/boardLayout.css';
@@ -11,6 +15,7 @@ interface BoardLayOutProps {
 const BoardLayOut: React.FC<BoardLayOutProps> = ({ postings }) => {
     const navigate = useNavigate();
     const [visiblePostCount, setVisiblePostCount] = useState(15);
+<<<<<<< HEAD
     const [currentPage, setCurrentPage] = useState(1);
     const [addIndex, setAddIndex] = useState(0);
     const [isLeftButtonActive, setIsLeftButtonActive] = useState(false);
@@ -89,6 +94,15 @@ const BoardLayOut: React.FC<BoardLayOutProps> = ({ postings }) => {
         pageButtons.push(pageButton);
         if (pageNumber * visiblePostCount >= postings.length) break;
     }
+=======
+
+    const handleTitleClick = (id: number, category: string) => {
+        navigate(`/boarddetail/${category}/${id}`);
+    };
+
+    const visiblePostings = postings.slice(0, visiblePostCount);
+    const liCount = Math.ceil(postings.length / visiblePostCount);
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
 
     return (
         <section className="boardLayOut">
@@ -130,6 +144,7 @@ const BoardLayOut: React.FC<BoardLayOutProps> = ({ postings }) => {
                         </tbody>
                     </table>
                 </div>
+<<<<<<< HEAD
 
                 <nav className="pageNationWrap">
                     <button
@@ -153,6 +168,21 @@ const BoardLayOut: React.FC<BoardLayOutProps> = ({ postings }) => {
                     >
                         글쓰기
                     </button>
+=======
+                <button className="writeBtn">
+                    <Link to="/write">글쓰기</Link>
+                </button>
+                <nav>
+                    <button>왼쪽</button>
+                    <ul>
+                        {Array.from({ length: liCount }, (_, index) => (
+                            <li key={index + 1}>
+                                <button>{index + 1}</button>
+                            </li>
+                        ))}
+                    </ul>
+                    <button>오른쪽</button>
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
                 </nav>
             </div>
             <div className="bottomSide"></div>

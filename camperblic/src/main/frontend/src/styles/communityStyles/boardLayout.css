@@ -7,6 +7,15 @@
     align-items: center;
     background-color: #111;
     color: #111;
+<<<<<<< HEAD
+=======
+}
+
+.innerWrap {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
 }
 
 /* .innerWrap */
@@ -41,6 +50,7 @@
     padding: 10px 20px;
 }
 
+<<<<<<< HEAD
 .tableContainer tr:nth-child(even) {
     background-color: #fff;
 }
@@ -53,6 +63,19 @@
 .linkTd:hover {
     background-color: #ccc;
     color: #111;
+=======
+.boardLayOut tr:nth-child(even) {
+    background-color: #fff; /* 짝수 행의 배경색을 흰색으로 설정 */
+}
+
+.boardLayOut tr:nth-child(odd) {
+    background-color: #eee; /* 홀수 행의 배경색을 회색으로 설정 */
+}
+
+.boardLayOut .linkTd:hover {
+    background-color: #ccc; /* 호버 상태에서 td 영역의 배경색을 변경 */
+    color: #111; /* 호버 상태에서 텍스트 색상을 변경 */
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
     cursor: pointer;
 }
 
@@ -61,6 +84,7 @@
     text-decoration: none;
 }
 
+<<<<<<< HEAD
 /* .writeBtn */
 .writeBtn {
     position: absolute;
@@ -79,6 +103,38 @@
 .writeBtn a {
     color: #111;
     text-decoration: none;
+=======
+.tableContainer {
+    border: 1px solid white;
+}
+
+.writeBtn {
+    background-color: #fff;
+    color: #111;
+    width: 80px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    align-self: end;
+}
+
+.writeBtn a {
+    color: #111;
+    text-decoration: none;
+}
+
+.writeBtn:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+.writeBtn:focus {
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
 }
 
 .writeBtn:hover {

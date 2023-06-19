@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import axios from 'axios';
+<<<<<<< HEAD
 import {Posting} from '../../types';
 import '../../styles/communityStyles/boardDetail.css';
 
@@ -22,6 +23,13 @@ const EditDeleteButtons: React.FC<{ handleEdit: () => void; handleDelete: () => 
 
 const BoardDetail: React.FC = () => {
     const {id, category} = useParams<{ id: string; category: string }>();
+=======
+import { Posting } from '../../types';
+import '../../styles/communityStyles/boardDetail.css';
+
+const BoardDetail: React.FC = () => {
+    const { id, category } = useParams<{ id: string, category: string }>();
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
     const [posting, setPosting] = useState<Posting>();
     const navigate = useNavigate();
 
@@ -65,6 +73,7 @@ const BoardDetail: React.FC = () => {
     };
 
     return (
+<<<<<<< HEAD
         <section className="board-detail-container">
             <div className="detailDecoTop">데코 들어갈 자리</div>
 
@@ -75,6 +84,23 @@ const BoardDetail: React.FC = () => {
                             <div className="post-header">
                                 <h3>{posting?.title}</h3>
                                 <p>글 번호: {posting?.id}</p>
+=======
+        <section>
+            <div className="board-detail-container">
+                <section className="board-detail">
+                    <div className="container">
+                        <div className="post">
+                            <div className="post-info">
+                                <div className="post-header">
+                                    <h3>{posting?.title}</h3>
+                                    <p>글 번호: {posting?.id}</p>
+                                </div>
+                                <div className="post-details">
+                                    <p>
+                                        작성자: {posting?.name} | 작성일: {posting?.createdate} | 조회수: {posting?.views}
+                                    </p>
+                                </div>
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
                             </div>
                             <div className="post-details">
                                 <p>
@@ -86,6 +112,7 @@ const BoardDetail: React.FC = () => {
                             <p>{posting?.content}</p>
                         </div>
                     </div>
+<<<<<<< HEAD
                 </div>
                 {true && <EditDeleteButtons handleEdit={handleEdit} handleDelete={handleDelete}/>}
                 <div className="button-group">
@@ -127,6 +154,10 @@ const BoardDetail: React.FC = () => {
             </article>
 
             <div className="detailDecoTop">데코 들어갈 자리</div>
+=======
+                </section>
+            </div>
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
         </section>
     );
 };

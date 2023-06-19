@@ -4,8 +4,13 @@ import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
+<<<<<<<< HEAD:camperblic/src/main/java/com/codream/camperblic/domain/community/BaseEntity.java
 @MappedSuperclass
 public abstract class BaseEntity {
+========
+@Entity
+public class Campstory {
+>>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c:camperblic/src/main/java/com/codream/camperblic/domain/community/Campstory.java
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +31,10 @@ public abstract class BaseEntity {
 
     private String content;
 
+<<<<<<<< HEAD:camperblic/src/main/java/com/codream/camperblic/domain/community/BaseEntity.java
     @Column(insertable = false, updatable = false)
+========
+>>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c:camperblic/src/main/java/com/codream/camperblic/domain/community/Campstory.java
     private String category;
 
     public Long getId() {

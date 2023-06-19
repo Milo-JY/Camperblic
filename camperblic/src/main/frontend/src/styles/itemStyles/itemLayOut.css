@@ -4,13 +4,20 @@
 /*}*/
 
 .item-list {
+    padding-top: 30px;
+    padding-bottom: 30px;
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: repeat(auto-fit, minmax(250px,250px));
+=======
+    grid-template-columns: repeat(auto-fit, minmax(300px,300px));
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
     gap: 20px;
     justify-content: center;
 }
 
 .item-card {
+    height: 270px;
     padding: 20px;
     background-color: antiquewhite;
     border-radius: 5px;
@@ -48,11 +55,20 @@
 
 .topFont{
     background-color: #61dafb;
+<<<<<<< HEAD
     margin-left: 250px;
     margin-right: 25px;
 }
 .topText {
     padding-top: 25px;
+=======
+    /*margin-left: 250px;*/
+    /*margin-right: 25px;*/
+}
+.topText {
+    /*padding-top: 25px;*/
+    height: 70px;
+>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
     display: flex;
     justify-content: center;
     align-items: center;
