@@ -1,10 +1,8 @@
 package com.codream.camperblic.repository;
 
-import com.codream.camperblic.domain.community.Campstoryboard;
-import com.codream.camperblic.domain.community.Freeboard;
-import com.codream.camperblic.domain.community.Gathercamper;
-import com.codream.camperblic.domain.community.Reviewcampingsite;
+import com.codream.camperblic.domain.community.*;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,7 +10,7 @@ import java.util.List;
 
 @Transactional
 @Repository
-public class JpaPostingRepository implements PostingRepository{
+public class JpaPostingRepository implements PostingRepository {
 
     private final EntityManager em;
 
@@ -22,32 +20,142 @@ public class JpaPostingRepository implements PostingRepository{
 
 //  findAll 메서드
     @Override
-    public List<Campstoryboard> findCampPostings() {
-        return em.createQuery("select p from Campstoryboard p", Campstoryboard.class)
+    public List<Campstory> findCampPostings() {
+        return em.createQuery("select p from Campstory p ORDER BY p.id DESC", Campstory.class)
                 .getResultList();
     }
 
     @Override
     public List<Freeboard> findFreePostings() {
-        return em.createQuery("select p from Freeboard p", Freeboard.class)
+        return em.createQuery("select p from Freeboard p ORDER BY p.id DESC", Freeboard.class)
                 .getResultList();
     }
 
     @Override
     public List<Gathercamper> findGatherPostings() {
-        return em.createQuery("select p from Gathercamper p", Gathercamper.class)
+        return em.createQuery("select p from Gathercamper p ORDER BY p.id DESC", Gathercamper.class)
                 .getResultList();
     }
 
     @Override
-    public List<Reviewcampingsite> findReviewPostings() {
-        return em.createQuery("select p from Reviewcampingsite p", Reviewcampingsite.class)
+    public List<Reviewcamping> findReviewPostings() {
+        return em.createQuery("select p from Reviewcamping p ORDER BY p.id DESC", Reviewcamping.class)
                 .getResultList();
     }// findAll 메서드 끝
 
 
+
+    //findById
     @Override
-    public Campstoryboard findCampPostingById(Long id) {
-        return em.find(Campstoryboard.class, id);
+    public Campstory findCampPostingById(Long id) {
+        return em.find(Campstory.class, id);
+    }
+
+    @Override
+    public Freeboard findFreePostingById(Long id) {
+        return em.find(Freeboard.class, id);
+    }
+
+    @Override
+    public Gathercamper findGatherPostingById(Long id) {
+        return em.find(Gathercamper.class, id);
+    }
+
+    @Override
+    public Reviewcamping findReviewPostingById(Long id) {
+        return em.find(Reviewcamping.class, id);
+    }
+
+    //upload
+
+    @Override
+    public Campstory uploadCampPosting(Campstory campstory) {
+        em.persist(campstory);
+        return campstory;
+    }
+
+    @Override
+    public Freeboard uploadFreePosting(Freeboard freeboard) {
+        em.persist(freeboard);
+        return freeboard;
+    }
+
+    @Override
+    public Gathercamper uploadGatherPosting(Gathercamper gathercamper) {
+        em.persist(gathercamper);
+        return gathercamper;
+    }
+
+    @Override
+    public Reviewcamping uploadReviewPosting(Reviewcamping reviewcamping) {
+        em.persist(reviewcamping);
+        return reviewcamping;
+    }
+
+    // 글 수정
+
+    public <T extends BaseEntity> T editPosting(Class<T> clazz, Long id, T camp) {
+        Query query = em.createQuery("UPDATE " + clazz.getSimpleName() + " c SET c.title = :title, c.content = :content WHERE c.id = :id");
+        query.setParameter("title", camp.getTitle());
+        query.setParameter("content", camp.getContent());
+        query.setParameter("id", id);
+        int updatedCount = query.executeUpdate();
+
+        if (updatedCount > 0) {
+            return em.find(clazz, id);
+        } else {
+            return null;
+        }
+    }
+
+    //글 삭제
+    @Override
+    public boolean deletePosting(String category, Long id) {
+        Object entity = null;
+        if (category.equals("campstory")) {
+            entity = em.find(Campstory.class, id);
+        } else if (category.equals("freeboard")) {
+            entity = em.find(Freeboard.class, id);
+        } else if (category.equals("gathercamper")) {
+            entity = em.find(Gathercamper.class, id);
+        } else if (category.equals("reviewcamping")) {
+            entity = em.find(Reviewcamping.class, id);
+        }
+
+        if (entity != null) {
+            em.remove(entity);
+            return true;
+        }
+
+        return false;
+    }
+
+    //조회수 증가
+    public void increaseViewCount(String category, Long id) {
+        if (category.equals("campstory")) {
+            Campstory campstory = em.find(Campstory.class, id);
+            if (campstory != null) {
+                campstory.setViews(campstory.getViews() + 1);
+                em.merge(campstory);
+            }
+        } else if (category.equals("freeboard")) {
+            Freeboard freeboard = em.find(Freeboard.class, id);
+            if (freeboard != null) {
+                freeboard.setViews(freeboard.getViews() + 1);
+                em.merge(freeboard);
+            }
+        } else if (category.equals("gathercamper")) {
+            Gathercamper gathercamper = em.find(Gathercamper.class, id);
+            if (gathercamper != null) {
+                gathercamper.setViews(gathercamper.getViews() + 1);
+                em.merge(gathercamper);
+            }
+        } else if (category.equals("reviewcamping")) {
+            Reviewcamping reviewcamping = em.find(Reviewcamping.class, id);
+            if (reviewcamping != null) {
+                reviewcamping.setViews(reviewcamping.getViews() + 1);
+                em.merge(reviewcamping);
+            }
+        }
     }
 }

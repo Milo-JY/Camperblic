@@ -1,14 +1,18 @@
 import React from 'react';
 import { Item } from "../../types";
-import "../../styles/itemStyles/itemLayOut.css"
+import "../../styles/itemStyles/itemLayOut.css";
 
 interface ItemLayOutProps {
     items: Item[];
+    topText: string;
 }
 
-const ItemLayOut: React.FC<ItemLayOutProps> = ({ items }) => {
+const ItemLayOut: React.FC<ItemLayOutProps> = ({ items, topText }) => {
     return (
-        <main className={"itemLayOut"}>
+        <section className="itemLayOut">
+            <div className="topFont">
+                <h1 className="topText">{topText}</h1>
+            </div>
             <div className="item-list">
                 {items.map((item) => (
                     <div key={item.item_id} className="item-card">
@@ -25,7 +29,7 @@ const ItemLayOut: React.FC<ItemLayOutProps> = ({ items }) => {
                     </div>
                 ))}
             </div>
-        </main>
+        </section>
     );
 };
 

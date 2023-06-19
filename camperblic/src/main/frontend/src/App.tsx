@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Main from "./pages/Main";
-import MemberList from "./pages/MemberList";
 import Cook from "./pages/item/Cook";
 import Etc from "./pages/item/Etc";
 import Mat from "./pages/item/Mat";
@@ -14,7 +13,7 @@ import ItemAll from "./pages/item/ItemAll";
 import Chair from "./pages/item/Chair";
 import Tent from "./pages/item/Tent";
 import Login from "./pages/login/Login";
-import Signin from "./pages/login/Signin";
+import SignUp from "./pages/login/SignUp";
 import Cart from "./pages/payment/Cart";
 import Order from "./pages/payment/Order";
 import AdminDashboard from "./pages/admin/AdminDashboard";
@@ -30,8 +29,9 @@ import CampStroy from "./pages/community/CampStroy";
 import CommunityDashboard from "./pages/community/CommunityDashboard";
 import FreeBoard from "./pages/community/FreeBoard";
 import GatherCamperBoard from "./pages/community/GatherCamperBoard";
-import ReviewCampSite from "./pages/community/ReviewCampSite";
+import ReviewCamping from "./pages/community/ReviewCamping";
 import BoardDetail from "./pages/community/BoardDetail";
+import BoardWrite from "./pages/community/BoardWrite";
 
 function App() {
 
@@ -44,11 +44,10 @@ function App() {
                 <main>
                     <Routes>
                         <Route path='/' element={<Main/>}/>
-                        <Route path='/members' element={<MemberList/>}/>
 
                         {/* 호준 로그인 관련 페이지 */}
                         <Route path='/login' element={<Login/>}/>
-                        <Route path='/signin' element={<Signin/>}/>
+                        <Route path='/signup' element={<SignUp/>}/>
                         <Route path='/mypage' element={<MyPage/>}/>
                         <Route path='/orderlist' element={<OrderList/>}/>
                         <Route path='/findaccount' element={<FindAccount/>}/>
@@ -59,12 +58,13 @@ function App() {
                         <Route path='/community' element={<CommunityDashboard/>}/>
                         <Route path='/freeboard' element={<FreeBoard/>}/>
                         <Route path='/gathercamper' element={<GatherCamperBoard/>}/>
-                        <Route path='/reviewcampingsite' element={<ReviewCampSite/>}/>
-                        <Route path='/boarddetail/:id' element={<BoardDetail/>}/>
+                        <Route path='/reviewcamping' element={<ReviewCamping/>}/>
+                        <Route path='/boarddetail/:category/:id' element={<BoardDetail/>}/>
+                        <Route path='/writepost/:category' element={<BoardWrite/>}/>
 
                         {/* 신준 상품 관련 페이지 */}
                         <Route path='/itemall' element={<ItemAll/>}/>
-                        <Route path='/itemdetail' element={<ItemDetail/>}/>
+                        <Route path='/itemdetail/:itemId' element={<ItemDetail/>}/>
                         <Route path='/cook' element={<Cook/>}/>
                         <Route path='/etc' element={<Etc/>}/>
                         <Route path='/mat' element={<Mat/>}/>

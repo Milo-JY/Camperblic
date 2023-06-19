@@ -2,9 +2,9 @@ import React from 'react';
 
 const FindAccount = () => {
     return (
-        <div>
+        <section>
             
-        </div>
+        </section>
     );
 };
 
