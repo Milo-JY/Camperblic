@@ -1,18 +1,18 @@
 export interface Member {
     id : number,
-    name : string,
+    name : string
 };
 
 //신준이꺼
 export interface Item {
-    itemId: string,
+    item_id: string,
     name: string,
     price: number,
     description: string,
-    categoryId: string,
-    imagePath: string,
+    category_id: string,
+    image_path: string,
     amount: number,
-    currentStock: number,
+    current_stock: number,
 }
 
 
@@ -27,8 +27,12 @@ export interface Posting {
     views: number | null,
     content: string,
 <<<<<<< HEAD
+<<<<<<< HEAD
     category: string,
 =======
     category: string;
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+    category: string;
+>>>>>>> parent of aa1166d (minsu)
 }

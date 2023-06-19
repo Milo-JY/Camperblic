@@ -19,9 +19,12 @@ public class PostingService {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // find list
 =======
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+>>>>>>> parent of aa1166d (minsu)
     public List<Campstory> findCampPostings() {
         return postingRepository.findCampPostings();
     }
@@ -39,9 +42,12 @@ public class PostingService {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // find detail
 =======
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+>>>>>>> parent of aa1166d (minsu)
     public Campstory findCampPostingDetail(Long id) {
         return postingRepository.findCampPostingById(id);
     }
@@ -57,6 +63,7 @@ public class PostingService {
     public Reviewcamping findReviewPostingDetail(Long id) {
         return postingRepository.findReviewPostingById(id);
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     // 글 등록
@@ -107,4 +114,6 @@ public class PostingService {
     }
 =======
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+>>>>>>> parent of aa1166d (minsu)
 }

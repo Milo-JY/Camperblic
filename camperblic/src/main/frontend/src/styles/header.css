@@ -1,32 +1,28 @@
-header * {
+* {
+    margin: 0;
+    padding: 0;
     text-decoration: none;
-    box-sizing: border-box;
+}
+
+header * {
+    color: white;
 }
 
 header {
     position: fixed;
 <<<<<<< HEAD
+<<<<<<< HEAD
     top: 0;
 =======
     top: 0px;
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+    top: 0px;
+>>>>>>> parent of aa1166d (minsu)
     width: 250px;
     height: 100vh;
+
     background-color: black;
-    color: #ccc; /* 텍스트 기본 색상 설정 */
-}
-
-header:hover {
-    color: #fff; /* 호버 시 텍스트 색상 설정 */
-}
-
-header a {
-    color: #ccc; /* 부모 요소의 텍스트 색상 상속 */
-    transition: color 0.3s ease;
-}
-
-header a:hover {
-    color: #fff;
 }
 
 .asideTop {
@@ -36,6 +32,7 @@ header a:hover {
 <<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 .mallCommuContainer {
     width: 100%;
     height: 60px;
@@ -75,6 +72,8 @@ header a:hover {
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
 }
 
+=======
+>>>>>>> parent of aa1166d (minsu)
 .mall,
 .community {
     overflow-y: scroll;
@@ -82,6 +81,7 @@ header a:hover {
     width: 249px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .headerLogo {
     display: flex;
@@ -100,16 +100,30 @@ header a:hover {
     align-items: center;
 
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+/*.mall::-webkit-scrollbar {*/
+/*    width: 8px;*/
+/*}*/
+
+/*.mall::-webkit-scrollbar-track {*/
+/*    background: black;*/
+/*}*/
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+
+>>>>>>> parent of aa1166d (minsu)
     padding: 35px 20px;
     border-bottom: 1px solid rgb(66, 66, 66);
     font-size: 30px;
-    color: #ccc; /* 텍스트 색상 추가 */
 }
 
 header nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
     border-bottom: 1px solid rgb(66, 66, 66);
 }
 
@@ -118,30 +132,14 @@ header nav {
     width: 100%;
     height: 60px;
     padding-left: 20px;
+
     cursor: pointer;
+
     font-size: 25px;
     font-weight: 700;
+
     border: none;
     background-color: black;
-    transition: color 0.3s ease;
-    color: #ccc; /* 텍스트 색상 추가 */
-}
-
-.headerMallCommuBtn {
-    text-align: center;
-    height: 60px;
-    width: 100%;
-    cursor: pointer;
-    font-size: 25px;
-    font-weight: 700;
-    border: none;
-    background-color: black;
-    transition: color 0.3s ease;
-    color: #ccc; /* 텍스트 색상 추가 */
-}
-
-.headerBtn:hover {
-    color: #fff;
 }
 
 .asideBottom {
@@ -149,11 +147,14 @@ header nav {
     position: absolute;
     bottom: 0;
     left: 0;
+
     background-color: black;
     box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     padding: 20px 0;
     gap: 20px;
 }
@@ -161,11 +162,14 @@ header nav {
 .bottomBtn {
     width: 80%;
     height: 50px;
+
     border: none;
     background-color: black;
     cursor: pointer;
+
     border: 1px solid rgb(66, 66, 66);
     border-radius: 3%;
+<<<<<<< HEAD
     color: #ccc;
     transition: color 0.3s ease;
 }
@@ -180,19 +184,24 @@ header nav a {
 header nav a {
     color: white;
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+}
+
+header nav a {
+    color: white;
+>>>>>>> parent of aa1166d (minsu)
     display: flex;
     height: 50px;
     padding-left: 20px;
     align-items: center;
+
     font-size: 25px;
     font-weight: 700;
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
+    opacity: .5;
 }
 
 header nav a:hover {
     opacity: 1;
-    color: #fff;
 }
 
 .justDeco {
@@ -202,7 +211,6 @@ header nav a:hover {
     width: 100vw;
     left: 0;
     background-color: black;
-    transition: background-color 0.3s ease;
 }
 
 .justDeco.top {
@@ -213,10 +221,6 @@ header nav a:hover {
     bottom: 0;
 }
 
-.justDeco:hover {
-    background-color: rgb(33, 33, 33);
-}
-
 .right {
     z-index: -1;
     position: fixed;
@@ -225,30 +229,4 @@ header nav a:hover {
     right: 0;
     top: 0;
     background-color: black;
-    transition: background-color 0.3s ease;
-}
-
-.right:hover {
-    background-color: rgb(33, 33, 33);
-}
-
-.animated-button {
-    position: relative;
-    overflow: hidden;
-}
-
-.animated-button:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: width 0.3s ease;
-    z-index: -1;
-}
-
-.animated-button:hover:before {
-    width: 100%;
 }

@@ -1,15 +1,20 @@
 package com.codream.camperblic.repository;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.codream.camperblic.domain.community.*;
 =======
+=======
+>>>>>>> parent of aa1166d (minsu)
 import com.codream.camperblic.domain.community.Campstory;
 import com.codream.camperblic.domain.community.Freeboard;
 import com.codream.camperblic.domain.community.Gathercamper;
 import com.codream.camperblic.domain.community.Reviewcamping;
+<<<<<<< HEAD
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+>>>>>>> parent of aa1166d (minsu)
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,7 +22,7 @@ import java.util.List;
 
 @Transactional
 @Repository
-public class JpaPostingRepository implements PostingRepository {
+public class JpaPostingRepository implements PostingRepository{
 
     private final EntityManager em;
 
@@ -51,8 +56,6 @@ public class JpaPostingRepository implements PostingRepository {
     }// findAll 메서드 끝
 
 
-
-    //findById
     @Override
     public Campstory findCampPostingById(Long id) {
         return em.find(Campstory.class, id);
@@ -73,6 +76,7 @@ public class JpaPostingRepository implements PostingRepository {
         return em.find(Reviewcamping.class, id);
 <<<<<<< HEAD
     }
+<<<<<<< HEAD
 
     //upload
 
@@ -168,4 +172,6 @@ public class JpaPostingRepository implements PostingRepository {
 =======
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
     }
+=======
+>>>>>>> parent of aa1166d (minsu)
 }

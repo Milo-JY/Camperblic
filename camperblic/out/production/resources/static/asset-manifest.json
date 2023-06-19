@@ -1,15 +1,21 @@
 {
   "files": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "main.css": "/static/css/main.212d9646.css",
     "main.js": "/static/js/main.d914d2cf.js",
+=======
+    "main.css": "/static/css/main.66c1ac60.css",
+    "main.js": "/static/js/main.3f21e2d9.js",
+>>>>>>> parent of aa1166d (minsu)
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "index.html": "/index.html",
-    "main.212d9646.css.map": "/static/css/main.212d9646.css.map",
-    "main.d914d2cf.js.map": "/static/js/main.d914d2cf.js.map",
+    "main.66c1ac60.css.map": "/static/css/main.66c1ac60.css.map",
+    "main.3f21e2d9.js.map": "/static/js/main.3f21e2d9.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
+<<<<<<< HEAD
     "static/css/main.212d9646.css",
     "static/js/main.d914d2cf.js"
 =======
@@ -25,5 +31,9 @@
     "static/css/main.e6ee98c1.css",
     "static/js/main.222d7b29.js"
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+    "static/css/main.66c1ac60.css",
+    "static/js/main.3f21e2d9.js"
+>>>>>>> parent of aa1166d (minsu)
   ]
 }

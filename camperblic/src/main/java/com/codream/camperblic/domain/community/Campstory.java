@@ -6,9 +6,9 @@ import java.time.LocalDateTime;
 
 <<<<<<< HEAD
 @Entity
-@Table(name = "campstory")
-public class Campstory extends BaseEntity{
+public class Campstory {
 
+<<<<<<< HEAD
 }
 =======
 <<<<<<<< HEAD:camperblic/src/main/java/com/codream/camperblic/domain/community/BaseEntity.java
@@ -42,6 +42,17 @@ public class Campstory {
     @Column(insertable = false, updatable = false)
 ========
 >>>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c:camperblic/src/main/java/com/codream/camperblic/domain/community/Campstory.java
+=======
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String title;
+    private String name;
+    private LocalDateTime createdate;
+    private Integer views;
+    private String content;
+
+>>>>>>> parent of aa1166d (minsu)
     private String category;
 
     public Long getId() {
@@ -100,4 +111,7 @@ public class Campstory {
         this.category = category;
     }
 }
+<<<<<<< HEAD
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+>>>>>>> parent of aa1166d (minsu)

@@ -1,12 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 =======
 import React, { useState } from 'react';
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+import React, { useState } from 'react';
+>>>>>>> parent of aa1166d (minsu)
 import { Link, useNavigate } from 'react-router-dom';
 import { Posting } from '../../types';
 import '../../styles/communityStyles/boardLayout.css';
-import axios from "axios";
 
 interface BoardLayOutProps {
     postings: Posting[];
@@ -16,20 +19,19 @@ const BoardLayOut: React.FC<BoardLayOutProps> = ({ postings }) => {
     const navigate = useNavigate();
     const [visiblePostCount, setVisiblePostCount] = useState(15);
 <<<<<<< HEAD
+<<<<<<< HEAD
     const [currentPage, setCurrentPage] = useState(1);
     const [addIndex, setAddIndex] = useState(0);
     const [isLeftButtonActive, setIsLeftButtonActive] = useState(false);
     const [isRightButtonActive, setIsRightButtonActive] = useState(false);
+=======
+>>>>>>> parent of aa1166d (minsu)
 
-    const handleTitleClick = async (id: number, category: string) => {
-        try {
-            await increaseViewCount(id, category);
-            navigate(`/boarddetail/${category}/${id}`);
-        } catch (error) {
-            console.error('조회수 증가 중 오류 발생:', error);
-        }
+    const handleTitleClick = (id: number, category: string) => {
+        navigate(`/boarddetail/${category}/${id}`);
     };
 
+<<<<<<< HEAD
     const increaseViewCount = async (id: number, category: string) => {
         await axios.put(`/increase-view`, null, {
             params: {
@@ -103,6 +105,9 @@ const BoardLayOut: React.FC<BoardLayOutProps> = ({ postings }) => {
     const visiblePostings = postings.slice(0, visiblePostCount);
     const liCount = Math.ceil(postings.length / visiblePostCount);
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+    const visiblePostings = postings.slice(0, visiblePostCount);
+>>>>>>> parent of aa1166d (minsu)
 
     return (
         <section className="boardLayOut">
@@ -131,10 +136,7 @@ const BoardLayOut: React.FC<BoardLayOutProps> = ({ postings }) => {
                             <tr key={posting.id}>
                                 <td>{posting.id}</td>
                                 <td>{posting.name}</td>
-                                <td
-                                    className="linkTd"
-                                    onClick={() => handleTitleClick(posting.id, posting.category)}
-                                >
+                                <td className="linkTd" onClick={() => handleTitleClick(posting.id, posting.category)}>
                                     {posting.title}
                                 </td>
                                 <td>{posting.createdate}</td>
@@ -144,6 +146,7 @@ const BoardLayOut: React.FC<BoardLayOutProps> = ({ postings }) => {
                         </tbody>
                     </table>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
                 <nav className="pageNationWrap">
@@ -184,6 +187,11 @@ const BoardLayOut: React.FC<BoardLayOutProps> = ({ postings }) => {
                     <button>오른쪽</button>
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
                 </nav>
+=======
+                <button className="writeBtn">
+                    <Link to="/write">글쓰기</Link>
+                </button>
+>>>>>>> parent of aa1166d (minsu)
             </div>
             <div className="bottomSide"></div>
         </section>

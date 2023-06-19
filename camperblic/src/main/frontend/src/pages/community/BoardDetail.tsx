@@ -1,27 +1,16 @@
-import React, {useEffect, useState} from 'react';
-import {useParams, useNavigate} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Posting} from '../../types';
+=======
+import { Posting } from '../../types';
+>>>>>>> parent of aa1166d (minsu)
 import '../../styles/communityStyles/boardDetail.css';
 
-const EditDeleteButtons: React.FC<{ handleEdit: () => void; handleDelete: () => void }> = ({
-                                                                                               handleEdit,
-                                                                                               handleDelete,
-                                                                                           }) => {
-    return (
-        <div className="button-group">
-      <span className="button" onClick={handleEdit}>
-        수정
-      </span>
-            <span className="button" onClick={handleDelete}>
-        삭제
-      </span>
-        </div>
-    );
-};
-
 const BoardDetail: React.FC = () => {
+<<<<<<< HEAD
     const {id, category} = useParams<{ id: string; category: string }>();
 =======
 import { Posting } from '../../types';
@@ -30,8 +19,10 @@ import '../../styles/communityStyles/boardDetail.css';
 const BoardDetail: React.FC = () => {
     const { id, category } = useParams<{ id: string, category: string }>();
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+    const { id, category } = useParams<{ id: string, category: string }>();
+>>>>>>> parent of aa1166d (minsu)
     const [posting, setPosting] = useState<Posting>();
-    const navigate = useNavigate();
 
     useEffect(() => {
         axios
@@ -42,37 +33,8 @@ const BoardDetail: React.FC = () => {
             });
     }, [id]);
 
-    const handleEdit = () => {
-        // 게시물 수정 로직
-        navigate(`/writepost/${category}?edit=true&id=${id}`);
-    };
-
-    const handleDelete = () => {
-        axios
-            .delete('/delete-posting', {
-                params: {
-                    category: category,
-                    id: id
-                }
-            })
-            .then((response) => {
-                alert(response.data);
-                navigate(`/${category}`);
-            })
-            .catch((error) => {
-                alert('게시글 삭제에 실패했습니다:' + error);
-            });
-    };
-
-    const handleGoBack = () => {
-        navigate(-1);
-    };
-
-    const handleGoList = () => {
-        navigate(`/${category}`);
-    };
-
     return (
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="board-detail-container">
             <div className="detailDecoTop">데코 들어갈 자리</div>
@@ -85,6 +47,8 @@ const BoardDetail: React.FC = () => {
                                 <h3>{posting?.title}</h3>
                                 <p>글 번호: {posting?.id}</p>
 =======
+=======
+>>>>>>> parent of aa1166d (minsu)
         <section>
             <div className="board-detail-container">
                 <section className="board-detail">
@@ -100,18 +64,17 @@ const BoardDetail: React.FC = () => {
                                         작성자: {posting?.name} | 작성일: {posting?.createdate} | 조회수: {posting?.views}
                                     </p>
                                 </div>
+<<<<<<< HEAD
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+>>>>>>> parent of aa1166d (minsu)
                             </div>
-                            <div className="post-details">
-                                <p>
-                                    작성자: {posting?.name} | 작성일: {posting?.createdate} | 조회수: {posting?.views}
-                                </p>
+                            <div className="post-content">
+                                <p>{posting?.content}</p>
                             </div>
-                        </div>
-                        <div className="post-content">
-                            <p>{posting?.content}</p>
                         </div>
                     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
                 {true && <EditDeleteButtons handleEdit={handleEdit} handleDelete={handleDelete}/>}
@@ -158,6 +121,10 @@ const BoardDetail: React.FC = () => {
                 </section>
             </div>
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+                </section>
+            </div>
+>>>>>>> parent of aa1166d (minsu)
         </section>
     );
 };

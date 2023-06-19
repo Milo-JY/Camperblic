@@ -5,6 +5,7 @@ import com.codream.camperblic.domain.community.Freeboard;
 import com.codream.camperblic.domain.community.Gathercamper;
 import com.codream.camperblic.domain.community.Reviewcamping;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.codream.camperblic.service.PostingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,22 +19,36 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+import com.codream.camperblic.domain.item.*;
+import com.codream.camperblic.service.ItemService;
+import com.codream.camperblic.service.PostingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+>>>>>>> parent of aa1166d (minsu)
 
 import java.util.List;
 
 @RestController
 public class MainController {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private final PostingService postingService;
 =======
     private PostingService postingService;
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+    private PostingService postingService;
+>>>>>>> parent of aa1166d (minsu)
 
     @Autowired
     public MainController(PostingService postingService) {
         this.postingService = postingService;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     // 게시글 리스트 조회
     @GetMapping("/campstory")
@@ -43,41 +58,50 @@ public class MainController {
     @GetMapping("/campstory")
     public List<Campstory> campstory() {
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+    // 민수 컨트롤러
+    @GetMapping("/campstory")
+    public List<Campstory> campstory() {
+>>>>>>> parent of aa1166d (minsu)
         return postingService.findCampPostings();
     }
 
     @GetMapping("/freeboard")
-    public List<Freeboard> getFreeboardPostings() {
+    public List<Freeboard> freeboard() {
         return postingService.findFreePostings();
     }
 
     @GetMapping("/gathercamper")
-    public List<Gathercamper> getGathercamperPostings() {
+    public List<Gathercamper> gathercamper() {
         return postingService.findGatherPostings();
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     @GetMapping("/reviewcamping")
     public List<Reviewcamping> getReviewcampingPostings() {
+=======
+    @GetMapping("/reviewcampingsite")
+    public List<Reviewcamping> reviewcampingsite() {
+>>>>>>> parent of aa1166d (minsu)
         return postingService.findReviewPostings();
     }
 
-    //게시글 조회
     @GetMapping("/boarddetail/{category}/{id}")
     public Object getPostingDetail(@PathVariable("category") String category, @PathVariable("id") Long id) {
-        if (category.equals("campstory")) {
-            return postingService.findCampPostingDetail(id);
-        } else if (category.equals("freeboard")) {
-            return postingService.findFreePostingDetail(id);
-        } else if (category.equals("gathercamper")) {
-            return postingService.findGatherPostingDetail(id);
-        } else if (category.equals("reviewcamping")) {
-            return postingService.findReviewPostingDetail(id);
-        } else {
-            throw new IllegalArgumentException("Invalid category: " + category);
-        }
-    }
+        Object postingDetail = null;
 
+        if (category.equals("campstory")) {
+            postingDetail = postingService.findCampPostingDetail(id);
+        } else if (category.equals("freeboard")) {
+            postingDetail = postingService.findFreePostingDetail(id);
+        } else if (category.equals("gathercamper")) {
+            postingDetail = postingService.findGatherPostingDetail(id);
+        } else if (category.equals("reviewcamping")) {
+            postingDetail = postingService.findReviewPostingDetail(id);
+        }
+
+<<<<<<< HEAD
     //게시글 등록
     @PostMapping("/write/campstory")
     public String boardPosting(@RequestBody Campstory campstory) {
@@ -170,3 +194,8 @@ public class MainController {
     }// 민수 컨트롤러 끝
 }
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+        return postingDetail;
+    }// 민수 컨트롤러 끝
+}
+>>>>>>> parent of aa1166d (minsu)

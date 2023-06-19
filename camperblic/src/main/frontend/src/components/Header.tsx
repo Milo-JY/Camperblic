@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/header.css";
-import { useState } from "react";
+import {useState} from "react";
 import Admin from "./Admin";
 
 const Header = () => {
@@ -11,10 +11,6 @@ const Header = () => {
         setIsMall((p) => !p);
     };
 
-    const getMallCommuRight = () => {
-        return isMall ? 0 : "-50%";
-    };
-
     return (
         <header>
             <div className="justDeco top"></div>
@@ -23,6 +19,7 @@ const Header = () => {
                 <h1 className="headerLogo">
                     <Link to="/">CAMPERBLIC.</Link>
                 </h1>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <button className="headerBtn">
                     <Link to="/login">로그인</Link>
@@ -38,6 +35,10 @@ const Header = () => {
                 <button className="headerBtn"><Link to="/login">로그인</Link></button>
                 <button className="headerBtn" onClick={handleOfIsMall}>쇼핑몰</button>
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+                <button className="headerBtn"><Link to="/login">로그인</Link></button>
+                <button className="headerBtn" onClick={handleOfIsMall}>쇼핑몰</button>
+>>>>>>> parent of aa1166d (minsu)
 
                 <nav className="totalMenu">
                     <Link to="/cart">장바구니</Link>
@@ -50,7 +51,7 @@ const Header = () => {
                     <Link to="/mat">침낭/매트</Link>
                     <Link to="/cook">취사용품</Link>
                     <Link to="/etc">소품</Link>
-                    <button className="headerBtn">검색(())</button>
+                    <button className="logInBtn">검색(())</button>
                 </nav>
 
                 <nav className="community" style={{ display: isMall ? "none" : "block" }}>
@@ -58,10 +59,11 @@ const Header = () => {
                     <Link to="/campstory">캠핑 이야기</Link>
                     <Link to="/freeboard">자유 게시판</Link>
                     <Link to="/gathercamper">캠퍼 구인</Link>
-                    <Link to="/reviewcamping">캠핑장 후기</Link>
+                    <Link to="/reviewcampingsite">캠핑장 후기</Link>
                 </nav>
 
-                {isAdmin && <Admin />}
+                {isAdmin && <Admin/>}
+
             </aside>
 
             <aside className="asideBottom">
@@ -73,6 +75,6 @@ const Header = () => {
             <div className="right"></div>
         </header>
     );
-};
+}
 
 export default Header;

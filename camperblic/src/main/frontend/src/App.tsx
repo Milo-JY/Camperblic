@@ -13,7 +13,7 @@ import ItemAll from "./pages/item/ItemAll";
 import Chair from "./pages/item/Chair";
 import Tent from "./pages/item/Tent";
 import Login from "./pages/login/Login";
-import SignUp from "./pages/login/SignUp";
+import Signin from "./pages/login/Signin";
 import Cart from "./pages/payment/Cart";
 import Order from "./pages/payment/Order";
 import AdminDashboard from "./pages/admin/AdminDashboard";
@@ -29,9 +29,8 @@ import CampStroy from "./pages/community/CampStroy";
 import CommunityDashboard from "./pages/community/CommunityDashboard";
 import FreeBoard from "./pages/community/FreeBoard";
 import GatherCamperBoard from "./pages/community/GatherCamperBoard";
-import ReviewCamping from "./pages/community/ReviewCamping";
+import ReviewCampSite from "./pages/community/ReviewCampSite";
 import BoardDetail from "./pages/community/BoardDetail";
-import BoardWrite from "./pages/community/BoardWrite";
 
 function App() {
 
@@ -47,7 +46,7 @@ function App() {
 
                         {/* 호준 로그인 관련 페이지 */}
                         <Route path='/login' element={<Login/>}/>
-                        <Route path='/signup' element={<SignUp/>}/>
+                        <Route path='/signin' element={<Signin/>}/>
                         <Route path='/mypage' element={<MyPage/>}/>
                         <Route path='/orderlist' element={<OrderList/>}/>
                         <Route path='/findaccount' element={<FindAccount/>}/>
@@ -58,6 +57,7 @@ function App() {
                         <Route path='/community' element={<CommunityDashboard/>}/>
                         <Route path='/freeboard' element={<FreeBoard/>}/>
                         <Route path='/gathercamper' element={<GatherCamperBoard/>}/>
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <Route path='/reviewcamping' element={<ReviewCamping/>}/>
                         <Route path='/boarddetail/:category/:id' element={<BoardDetail/>}/>
@@ -75,10 +75,14 @@ function App() {
                         {/*<Route path='/chair' element={<Chair/>}/>*/}
                         {/*<Route path='/tent' element={<Tent/>}/>*/}
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+                        <Route path='/reviewcampingsite' element={<ReviewCampSite/>}/>
+                        <Route path='/boarddetail/:category/:id' element={<BoardDetail/>}/>
+>>>>>>> parent of aa1166d (minsu)
 
                         {/* 신준 상품 관련 페이지 */}
                         <Route path='/itemall' element={<ItemAll/>}/>
-                        <Route path='/itemdetail/:itemId' element={<ItemDetail/>}/>
+                        <Route path='/itemdetail' element={<ItemDetail/>}/>
                         <Route path='/cook' element={<Cook/>}/>
                         <Route path='/etc' element={<Etc/>}/>
                         <Route path='/mat' element={<Mat/>}/>

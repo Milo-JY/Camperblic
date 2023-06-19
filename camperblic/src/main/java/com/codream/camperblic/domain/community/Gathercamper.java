@@ -1,15 +1,20 @@
 package com.codream.camperblic.domain.community;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "gathercamper")
-public class Gathercamper extends BaseEntity{
+public class Gathercamper {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of aa1166d (minsu)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -76,5 +81,8 @@ public class Gathercamper extends BaseEntity{
     public void setCategory(String category) {
         this.category = category;
     }
+<<<<<<< HEAD
 >>>>>>> e55d47d211fce2377a00ff107978ef44ff2a5b7c
+=======
+>>>>>>> parent of aa1166d (minsu)
 }
