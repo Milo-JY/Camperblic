@@ -1,9 +1,6 @@
 package com.codream.camperblic.repository;
 
-import com.codream.camperblic.domain.community.Campstory;
-import com.codream.camperblic.domain.community.Freeboard;
-import com.codream.camperblic.domain.community.Gathercamper;
-import com.codream.camperblic.domain.community.Reviewcamping;
+import com.codream.camperblic.domain.community.*;
 
 import java.util.List;
 
@@ -22,4 +19,22 @@ public interface PostingRepository {
     Gathercamper findGatherPostingById(Long id);
 
     Reviewcamping findReviewPostingById(Long id);
+
+
+    Campstory uploadCampPosting(Campstory campstory);
+
+    Freeboard uploadFreePosting(Freeboard freeboard);
+
+    Gathercamper uploadGatherPosting(Gathercamper gathercamper);
+
+    Reviewcamping uploadReviewPosting(Reviewcamping reviewcamping);
+
+    //글 수정
+    <T extends BaseEntity> T editPosting(Class<T> clazz, Long id, T posting);
+
+    //글 삭제
+    boolean deletePosting(String category, Long id);
+
+    //조회수 증가
+    public void increaseViewCount(String category, Long id);
 }

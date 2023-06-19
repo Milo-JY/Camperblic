@@ -18,6 +18,7 @@ public class PostingService {
         this.postingRepository = postingRepository;
     }
 
+    // find list
     public List<Campstory> findCampPostings() {
         return postingRepository.findCampPostings();
     }
@@ -34,6 +35,7 @@ public class PostingService {
         return postingRepository.findReviewPostings();
     }
 
+    // find detail
     public Campstory findCampPostingDetail(Long id) {
         return postingRepository.findCampPostingById(id);
     }
@@ -48,5 +50,52 @@ public class PostingService {
 
     public Reviewcamping findReviewPostingDetail(Long id) {
         return postingRepository.findReviewPostingById(id);
+    }
+
+    // 글 등록
+    public Campstory uploadCampPosting(Campstory campstory) {
+        return postingRepository.uploadCampPosting(campstory);
+    }
+
+    public Freeboard uploadFreePosting(Freeboard freeboard) {
+        return postingRepository.uploadFreePosting(freeboard);
+    }
+
+    public Gathercamper uploadGatherPosting(Gathercamper gathercamper) {
+        return postingRepository.uploadGatherPosting(gathercamper);
+    }
+
+    public Reviewcamping uploadReviewPosting(Reviewcamping reviewcamping) {
+        return postingRepository.uploadReviewPosting(reviewcamping);
+    }
+
+    //글 수정
+
+    public Campstory editCampPosting(Long id, Campstory campstory) {
+        return postingRepository.editPosting(Campstory.class, id, campstory);
+    }
+
+    public Freeboard editFreePosting(Long id, Freeboard freeboard) {
+        return postingRepository.editPosting(Freeboard.class, id, freeboard);
+    }
+
+    public Gathercamper editGatherPosting(Long id, Gathercamper gathercamper) {
+        return postingRepository.editPosting(Gathercamper.class, id, gathercamper);
+    }
+
+    public Reviewcamping editReviewPosting(Long id, Reviewcamping reviewcamping) {
+        return postingRepository.editPosting(Reviewcamping.class, id, reviewcamping);
+    }
+
+    // 게시글 삭제
+    public boolean deletePosting(String category, Long id) {
+        postingRepository.deletePosting(category, id);
+        return true;
+    }
+
+    // 조회수 증가
+    public boolean increaseViews(String category, Long id) {
+        postingRepository.increaseViewCount(category, id);
+        return true;
     }
 }

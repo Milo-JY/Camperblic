@@ -1,18 +1,18 @@
 export interface Member {
     id : number,
-    name : string
+    name : string,
 };
 
 //신준이꺼
 export interface Item {
-    item_id: string,
+    itemId: string,
     name: string,
     price: number,
     description: string,
-    category_id: string,
-    image_path: string,
+    categoryId: string,
+    imagePath: string,
     amount: number,
-    current_stock: number,
+    currentStock: number,
 }
 
 
@@ -24,5 +24,5 @@ export interface Posting {
     createdate: string, // LocalDateTime은 string으로 처리
     views: number | null,
     content: string,
-    category: string;
+    category: string,
 }

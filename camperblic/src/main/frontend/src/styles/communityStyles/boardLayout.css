@@ -1,3 +1,6 @@
+/* boardLayout.css */
+
+/* .boardLayOut */
 .boardLayOut {
     display: flex;
     flex-direction: column;
@@ -6,55 +9,62 @@
     color: #111;
 }
 
+/* .innerWrap */
 .innerWrap {
     width: 80%;
     display: flex;
     flex-direction: column;
+
 }
 
-.boardLayOut table {
+/* .tableContainer */
+.tableContainer {
+    border: 1px solid white;
+}
+
+.tableContainer table {
     border-top: 2px solid #111;
     border-collapse: collapse;
     width: 100%;
 }
 
-.boardLayOut th {
+.tableContainer th {
     padding: 20px;
     background-color: #111;
     color: #fff;
     font-weight: bold;
 }
 
-.boardLayOut td {
+.tableContainer td {
     border-top: 1px solid #111;
     border-bottom: 1px solid #111;
     padding: 10px 20px;
 }
 
-.boardLayOut tr:nth-child(even) {
-    background-color: #fff; /* 짝수 행의 배경색을 흰색으로 설정 */
+.tableContainer tr:nth-child(even) {
+    background-color: #fff;
 }
 
-.boardLayOut tr:nth-child(odd) {
-    background-color: #eee; /* 홀수 행의 배경색을 회색으로 설정 */
+.tableContainer tr:nth-child(odd) {
+    background-color: #eee;
 }
 
-.boardLayOut .linkTd:hover {
-    background-color: #ccc; /* 호버 상태에서 td 영역의 배경색을 변경 */
-    color: #111; /* 호버 상태에서 텍스트 색상을 변경 */
+/* .linkTd */
+.linkTd:hover {
+    background-color: #ccc;
+    color: #111;
     cursor: pointer;
 }
 
-.boardLayOut a {
+.linkTd a {
     color: #111;
     text-decoration: none;
 }
 
-.tableContainer {
-    border: 1px solid white;
-}
-
+/* .writeBtn */
 .writeBtn {
+    position: absolute;
+    right: 0;
     background-color: #fff;
     color: #111;
     width: 80px;
@@ -64,7 +74,6 @@
     transition: background-color 0.3s, color 0.3s;
     margin: 10px 0px;
     padding: 10px 0px;
-    align-self: end;
 }
 
 .writeBtn a {
@@ -82,12 +91,79 @@
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
+/* .pageNationWrap */
+.pageNationWrap {
+    display: flex;
+    width: 100%;
+    margin: 20px 0px;
+    justify-content: center;
+    position: relative;
+}
+
+.pageNationWrap button {
+    background-color: #f2f2f2;
+    border: none;
+    color: #333;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 70px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.pageNationWrap button.active,
+.pageBtnUl li button.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.pageNationWrap button:hover,
+.pageBtnUl li button:hover {
+    background-color: #e0e0e0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.pageNationWrap button:disabled {
+    background-color: #222;
+    color: #333;
+    cursor: default;
+}
+
+/* .pageBtnUl */
+.pageBtnUl {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.pageBtnUl li button {
+    background-color: #111;
+    border: none;
+    color: #f2f2f2;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 40px;
+    height: 30px;
+}
+
+.pageNationWrap button:disabled:hover {
+    cursor: not-allowed;
+}
+
+/* .topSide */
 .topSide {
     width: 100%;
-    height: 100px;
+    height: 110px;
     background-color: chartreuse;
 }
 
+/* .bottomSide */
 .bottomSide {
     width: 100%;
     height: 200px;
