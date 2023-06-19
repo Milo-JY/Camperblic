@@ -10,7 +10,6 @@ header * {
 
 header {
     position: fixed;
-    top: 0px;
     width: 250px;
     height: 100vh;
 
@@ -20,7 +19,6 @@ header {
 .asideTop {
     width: 100%;
     height: 100%;
-    background-color: black;
 }
 
 .mall,
@@ -38,16 +36,17 @@ header {
 /*    background: black;*/
 /*}*/
 
-.headerLogo {
+h1 {
     display: flex;
     align-items: center;
 
-    padding: 35px 20px;
+    padding-left: 10px;
+    height: 80px;
     border-bottom: 1px solid rgb(66, 66, 66);
     font-size: 30px;
 }
 
-header nav {
+nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -55,10 +54,10 @@ header nav {
     border-bottom: 1px solid rgb(66, 66, 66);
 }
 
-.headerBtn {
+.logInBtn {
     text-align: start;
     width: 100%;
-    height: 60px;
+    height: 50px;
     padding-left: 20px;
 
     cursor: pointer;
@@ -67,6 +66,9 @@ header nav {
     font-weight: 700;
 
     border: none;
+    border-bottom: 1px solid rgb(66, 66, 66);
+
+    color: rgb(66, 66, 66);
     background-color: black;
 }
 
@@ -99,7 +101,7 @@ header nav {
     border-radius: 3%;
 }
 
-header nav a {
+nav a {
     color: white;
     display: flex;
     height: 50px;
@@ -111,7 +113,7 @@ header nav a {
     opacity: .5;
 }
 
-header nav a:hover {
+nav a:hover {
     opacity: 1;
 }
 

@@ -17,7 +17,6 @@ public class JpaItemRepository implements ItemRepository {
         this.em = em;
     }
 
-
     @Override
     public List<Cook> findAllCook() {
         return em.createQuery("select c from Cook c", Cook.class)

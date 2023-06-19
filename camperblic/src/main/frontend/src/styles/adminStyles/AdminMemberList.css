@@ -1,56 +1,61 @@
-/* AdminMemberList.css */
+.widgetlist{
+    display: grid;
+    margin-left: 270px;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    width:80%;
+    gap: 10px;
+    /*border: 1px solid;*/
+    /*font-size: 30px;*/
 
-.homeWidgets {
+
+}
+
+.homewidgets{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.widgettable {
-    width: 90%;
-    margin-top: 30px;
-    border-collapse: collapse;
-}
-.widgetmember1{
-    background-color: #424242;
-    color: white;
+.widgetmember{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /*display: flex;*/
+    justify-content: space-between;
 }
 
-.widgetmember2 {
-    background-color: #f1f1f1;
+.widgetlistmember{
+    border: 1px solid;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    gap: 70px;
+    justify-content: space-evenly;
+    margin: 20px 0;
 }
 
-.widgetmemberid,
-.widgetmembername,
-.widgetmemberphone,
-.widgetmemberemail,
-.widgetmemberdetail,
-.widgetmemberid2,
-.widgetmembername2,
-.widgetmemberphone2,
-.widgetmemberemail2,
-.widgetmemberdetail2{
-    text-align: center;
-    padding: 10px;
-    border: 1px solid #ddd;
+.widgetimg{
+    width:80px;
+    height: 80px;
+    line-height:80px;
+    margin-left: 20px;
+
+    border-radius: 50%;
 }
 
-.widgetmemberid {
-    font-weight: bold;
+.widgetmemberid{
+    display: flex;
+    flex-direction: column;
 }
 
-.widgetmemberdetail{
-    text-align: center;
-}
-
-.widgetbtn {
-    margin: 10px;
-    padding: 5px 10px;
-    background-color: #4CAF50;
-    color: white;
+.widgetbtn{
+    display: flex;
+    align-items: center;
     border: none;
+    border-radius: 10px;
+    padding: 7px 10px;
+    background-color: #eeeef7;
+    color: #555;
     cursor: pointer;
-}
-
-.widgetbtn:hover {
-    background-color: #45a049;
 }

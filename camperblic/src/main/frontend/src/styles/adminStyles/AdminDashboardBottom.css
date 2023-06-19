@@ -1,8 +1,8 @@
 .admindashboard_bottom{
-    /*margin-left: 250px;*/
+    margin-left: 250px;
     display: flex;
     justify-content: space-between;
     height:300px;
     
-    /*background-color: aqua;*/
+    background-color: aqua;
 }

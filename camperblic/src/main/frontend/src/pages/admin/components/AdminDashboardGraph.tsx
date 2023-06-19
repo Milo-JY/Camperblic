@@ -4,9 +4,9 @@ import Barchart from './Barchart';
 
 const AdminDashboardGraph = () => {
     return (
-        <section>
+        <div>
             <Barchart />
-        </section>
+        </div>
     );
 };
 

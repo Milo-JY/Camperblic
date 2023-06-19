@@ -19,8 +19,6 @@ public class Gathercamper {
     private Integer views;
     private String content;
 
-    private String category;
-
     public Long getId() {
         return id;
     }
@@ -67,13 +65,5 @@ public class Gathercamper {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
     }
 }

@@ -16,11 +16,11 @@ const Header = () => {
             <div className="justDeco top"></div>
 
             <aside className="asideTop">
-                <h1 className="headerLogo">
+                <h1>
                     <Link to="/">CAMPERBLIC.</Link>
                 </h1>
-                <button className="headerBtn"><Link to="/login">로그인</Link></button>
-                <button className="headerBtn" onClick={handleOfIsMall}>쇼핑몰</button>
+                <Link to="/login" className="logInBtn">로그인</Link>
+                <button className="logInBtn" onClick={handleOfIsMall}>쇼핑몰</button>
 
                 <nav className="totalMenu">
                     <Link to="/cart">장바구니</Link>

@@ -5,10 +5,10 @@ import '../../../styles/adminStyles/AdminDashboardBottom.css';
 
 const AdminDashboardBottom = () => {
     return (
-        <section className='admindashboard_bottom'>
+        <div className='admindashboard_bottom'>
             <AdminDashboardStock/>
             <AdminDashboardBoard/>
-        </section>
+        </div>
     );
 };
 

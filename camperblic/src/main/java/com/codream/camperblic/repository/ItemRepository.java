@@ -6,7 +6,6 @@ import java.util.List;
 
 public interface ItemRepository {
 
-
     List<Cook> findAllCook();
 
     List<Etc> findAllEtc();

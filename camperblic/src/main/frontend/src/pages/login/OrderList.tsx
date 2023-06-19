@@ -2,9 +2,9 @@ import React from 'react';
 
 const OrderList = () => {
     return (
-        <section>
+        <div>
             
-        </section>
+        </div>
     );
 };
 
