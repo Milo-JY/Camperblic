@@ -3,49 +3,30 @@ import '../../../styles/adminStyles/AdminMemberList.css';
 
 const AdminMemberList = () => {
     return (
-        <div className='homeWidgets'>
-            <ul className='widgetlist'>
-                <li className='widgetlistmember'>
-                    <img
-                        src="https://cdn.pixabay.com/photo/2016/01/16/22/15/waterfalls-1144130__340.jpg"
-                        className='widgetimg'
-                    />
-                    <div className='widgetmember'>
-                        <div className='widgetmemberid'>id:</div>
-                        <div className='widgetmembername'>이름:</div>
-                    </div>
-                    <button className='widgetbtn'>
-                        detail
-                    </button>
-                </li>
-                <li className='widgetlistmember'>
-                    <img
-                        src="https://cdn.pixabay.com/photo/2016/01/16/22/15/waterfalls-1144130__340.jpg"
-                        className='widgetimg'
-                    />
-                    <div className='widgetmember'>
-                        <div className='widgetmemberid'>id:</div>
-                        <div className='widgetmembername'>이름:</div>
-                    </div>
-                    <button className='widgetbtn'>
-                        detail
-                    </button>
-                </li>
-                <li className='widgetlistmember'>
-                    <img
-                        src="https://cdn.pixabay.com/photo/2016/01/16/22/15/waterfalls-1144130__340.jpg"
-                        className='widgetimg'
-                    />
-                    <div className='widgetmember'>
-                        <div className='widgetmemberid'>id:</div>
-                        <div className='widgetmembername'>이름:</div>
-                    </div>
-                    <button className='widgetbtn'>
-                        detail
-                    </button>
-                </li>
-            </ul>
-        </div>
+        <section className='homeWidgets'>
+            <table className='widgettable'>
+                <thead>
+                <tr className='widgetmember1'>
+                    <th className='widgetmemberid'>id</th>
+                    <th className='widgetmembername'>이름</th>
+                    <th className='widgetmemberphone'>전화번호</th>
+                    <th className='widgetmemberemail'>이메일</th>
+                    <th className='widgetmemberdetail'>상세보기</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr className='widgetmember2'>
+                    <td className='widgetmemberid2'>minwoo405</td>
+                    <td className='widgetmembername2'>양민우</td>
+                    <td className='widgetmemberphone2'>010-1234-1234</td>
+                    <td className='widgetmemberemail2'>gsjlg@gmail.com</td>
+                    <td className='widgetmemberdetail2'>
+                        <button className='widgetbtn'>detail</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
     );
 };
 

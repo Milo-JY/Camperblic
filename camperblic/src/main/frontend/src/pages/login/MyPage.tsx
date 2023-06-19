@@ -1,10 +1,11 @@
 import React from 'react';
 
 const MyPage = () => {
+
     return (
-        <div>
+        <section>
             
-        </div>
+        </section>
     );
 };
 
