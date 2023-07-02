@@ -1,23 +1,31 @@
-import React, {useEffect, useState} from 'react';
-import {Item} from "../../types";
+import React, { useEffect, useState } from 'react';
+import { Item } from "../../types";
 import axios from "axios";
 import ItemLayOut from "./ItemLayOut";
 
-
-const Mat = () => {
+const Etc = () => {
     const [items, setItems] = useState<Item[]>([]);
+    const [isLoading, setIsLoading] = useState(false);
+
+    const fetchItems = () => {
+        setIsLoading(true);
+        axios.get('/mat')
+            .then(response => setItems(prevItems => [...prevItems, ...response.data]))
+            .catch(error => console.log(error))
+            .finally(() => setIsLoading(false));
+    };
+
+    const loadMoreItems = () => {
+        fetchItems();
+    };
 
     useEffect(() => {
-        axios.get('/mat')
-            .then(response => setItems(response.data))
-            .catch(error => console.log(error))
+        fetchItems();
     }, []);
 
     return (
-
-            <ItemLayOut items={items} topText="침낭/매트"/>
-
+        <ItemLayOut items={items} topText="침낭/매트" onLoadMore={loadMoreItems} />
     );
 };
 
-export default Mat;
+export default Etc;
